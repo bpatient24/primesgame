@@ -1,1 +1,1 @@
-# primesgame
+# primesGame

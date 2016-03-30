@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A0DEDBC1CAB2F0100FE1F3F /* primesgameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DEDBB1CAB2F0100FE1F3F /* primesgameTests.swift */; };
+		3A0DEDC71CAB2F0100FE1F3F /* primesgameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DEDC61CAB2F0100FE1F3F /* primesgameUITests.swift */; };
+		3A11589F1CABB7A60057F98C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A11589A1CABB7A60057F98C /* AppDelegate.swift */; };
+		3A1158A01CABB7A60057F98C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A11589B1CABB7A60057F98C /* Assets.xcassets */; };
+		3A1158A21CABB7A60057F98C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A11589D1CABB7A60057F98C /* Info.plist */; };
+		3A1158A31CABB7A60057F98C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A11589E1CABB7A60057F98C /* ViewController.swift */; };
+		3A1158A61CABB7CF0057F98C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1158A41CABB7CF0057F98C /* LaunchScreen.storyboard */; };
+		3A1158A71CABB7CF0057F98C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1158A51CABB7CF0057F98C /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A0DEDB81CAB2F0100FE1F3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0DED9B1CAB2F0100FE1F3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A0DEDA21CAB2F0100FE1F3F;
+			remoteInfo = primesgame;
+		};
+		3A0DEDC31CAB2F0100FE1F3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A0DED9B1CAB2F0100FE1F3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A0DEDA21CAB2F0100FE1F3F;
+			remoteInfo = primesgame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A0DEDA31CAB2F0100FE1F3F /* primesgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = primesgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0DEDB71CAB2F0100FE1F3F /* primesgameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = primesgameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0DEDBB1CAB2F0100FE1F3F /* primesgameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primesgameTests.swift; sourceTree = "<group>"; };
+		3A0DEDBD1CAB2F0100FE1F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A0DEDC21CAB2F0100FE1F3F /* primesgameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = primesgameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0DEDC61CAB2F0100FE1F3F /* primesgameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primesgameUITests.swift; sourceTree = "<group>"; };
+		3A0DEDC81CAB2F0100FE1F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A11589A1CABB7A60057F98C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = primesgame/AppDelegate.swift; sourceTree = "<group>"; };
+		3A11589B1CABB7A60057F98C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = primesgame/Assets.xcassets; sourceTree = "<group>"; };
+		3A11589D1CABB7A60057F98C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = primesgame/Info.plist; sourceTree = "<group>"; };
+		3A11589E1CABB7A60057F98C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = primesgame/ViewController.swift; sourceTree = "<group>"; };
+		3A1158A41CABB7CF0057F98C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = primesgame/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A1158A51CABB7CF0057F98C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = primesgame/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AF6C0511CABB47C003DBC91 /* primesgame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "primesgame-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A0DEDA01CAB2F0100FE1F3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0DEDB41CAB2F0100FE1F3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0DEDBF1CAB2F0100FE1F3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A0DED9A1CAB2F0100FE1F3F = {
+			isa = PBXGroup;
+			children = (
+				3A1158991CABB7920057F98C /* primesgame */,
+				3A0DEDBA1CAB2F0100FE1F3F /* primesgameTests */,
+				3A0DEDC51CAB2F0100FE1F3F /* primesgameUITests */,
+				3A0DEDA41CAB2F0100FE1F3F /* Products */,
+				3AF6C0511CABB47C003DBC91 /* primesgame-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		3A0DEDA41CAB2F0100FE1F3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A0DEDA31CAB2F0100FE1F3F /* primesgame.app */,
+				3A0DEDB71CAB2F0100FE1F3F /* primesgameTests.xctest */,
+				3A0DEDC21CAB2F0100FE1F3F /* primesgameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A0DEDBA1CAB2F0100FE1F3F /* primesgameTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A0DEDBB1CAB2F0100FE1F3F /* primesgameTests.swift */,
+				3A0DEDBD1CAB2F0100FE1F3F /* Info.plist */,
+			);
+			path = primesgameTests;
+			sourceTree = "<group>";
+		};
+		3A0DEDC51CAB2F0100FE1F3F /* primesgameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A0DEDC61CAB2F0100FE1F3F /* primesgameUITests.swift */,
+				3A0DEDC81CAB2F0100FE1F3F /* Info.plist */,
+			);
+			path = primesgameUITests;
+			sourceTree = "<group>";
+		};
+		3A1158991CABB7920057F98C /* primesgame */ = {
+			isa = PBXGroup;
+			children = (
+				3A11589A1CABB7A60057F98C /* AppDelegate.swift */,
+				3A11589E1CABB7A60057F98C /* ViewController.swift */,
+				3A1158A51CABB7CF0057F98C /* Main.storyboard */,
+				3A11589B1CABB7A60057F98C /* Assets.xcassets */,
+				3A1158A41CABB7CF0057F98C /* LaunchScreen.storyboard */,
+				3A11589D1CABB7A60057F98C /* Info.plist */,
+			);
+			name = primesgame;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A0DEDA21CAB2F0100FE1F3F /* primesgame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A0DEDCB1CAB2F0100FE1F3F /* Build configuration list for PBXNativeTarget "primesgame" */;
+			buildPhases = (
+				3A0DED9F1CAB2F0100FE1F3F /* Sources */,
+				3A0DEDA01CAB2F0100FE1F3F /* Frameworks */,
+				3A0DEDA11CAB2F0100FE1F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = primesgame;
+			productName = primesgame;
+			productReference = 3A0DEDA31CAB2F0100FE1F3F /* primesgame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A0DEDB61CAB2F0100FE1F3F /* primesgameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A0DEDCE1CAB2F0100FE1F3F /* Build configuration list for PBXNativeTarget "primesgameTests" */;
+			buildPhases = (
+				3A0DEDB31CAB2F0100FE1F3F /* Sources */,
+				3A0DEDB41CAB2F0100FE1F3F /* Frameworks */,
+				3A0DEDB51CAB2F0100FE1F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A0DEDB91CAB2F0100FE1F3F /* PBXTargetDependency */,
+			);
+			name = primesgameTests;
+			productName = primesgameTests;
+			productReference = 3A0DEDB71CAB2F0100FE1F3F /* primesgameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A0DEDC11CAB2F0100FE1F3F /* primesgameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A0DEDD11CAB2F0100FE1F3F /* Build configuration list for PBXNativeTarget "primesgameUITests" */;
+			buildPhases = (
+				3A0DEDBE1CAB2F0100FE1F3F /* Sources */,
+				3A0DEDBF1CAB2F0100FE1F3F /* Frameworks */,
+				3A0DEDC01CAB2F0100FE1F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A0DEDC41CAB2F0100FE1F3F /* PBXTargetDependency */,
+			);
+			name = primesgameUITests;
+			productName = primesgameUITests;
+			productReference = 3A0DEDC21CAB2F0100FE1F3F /* primesgameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A0DED9B1CAB2F0100FE1F3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ben Patient";
+				TargetAttributes = {
+					3A0DEDA21CAB2F0100FE1F3F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					3A0DEDB61CAB2F0100FE1F3F = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 3A0DEDA21CAB2F0100FE1F3F;
+					};
+					3A0DEDC11CAB2F0100FE1F3F = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 3A0DEDA21CAB2F0100FE1F3F;
+					};
+				};
+			};
+			buildConfigurationList = 3A0DED9E1CAB2F0100FE1F3F /* Build configuration list for PBXProject "primesgame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A0DED9A1CAB2F0100FE1F3F;
+			productRefGroup = 3A0DEDA41CAB2F0100FE1F3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A0DEDA21CAB2F0100FE1F3F /* primesgame */,
+				3A0DEDB61CAB2F0100FE1F3F /* primesgameTests */,
+				3A0DEDC11CAB2F0100FE1F3F /* primesgameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A0DEDA11CAB2F0100FE1F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1158A71CABB7CF0057F98C /* Main.storyboard in Resources */,
+				3A1158A61CABB7CF0057F98C /* LaunchScreen.storyboard in Resources */,
+				3A1158A01CABB7A60057F98C /* Assets.xcassets in Resources */,
+				3A1158A21CABB7A60057F98C /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0DEDB51CAB2F0100FE1F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0DEDC01CAB2F0100FE1F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A0DED9F1CAB2F0100FE1F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1158A31CABB7A60057F98C /* ViewController.swift in Sources */,
+				3A11589F1CABB7A60057F98C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0DEDB31CAB2F0100FE1F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0DEDBC1CAB2F0100FE1F3F /* primesgameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A0DEDBE1CAB2F0100FE1F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0DEDC71CAB2F0100FE1F3F /* primesgameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A0DEDB91CAB2F0100FE1F3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A0DEDA21CAB2F0100FE1F3F /* primesgame */;
+			targetProxy = 3A0DEDB81CAB2F0100FE1F3F /* PBXContainerItemProxy */;
+		};
+		3A0DEDC41CAB2F0100FE1F3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A0DEDA21CAB2F0100FE1F3F /* primesgame */;
+			targetProxy = 3A0DEDC31CAB2F0100FE1F3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3A0DEDC91CAB2F0100FE1F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A0DEDCA1CAB2F0100FE1F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A0DEDCC1CAB2F0100FE1F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = primesgame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bpatient.primesgame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "primesgame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A0DEDCD1CAB2F0100FE1F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = primesgame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bpatient.primesgame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "primesgame-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		3A0DEDCF1CAB2F0100FE1F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = primesgameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bpatient.primesgameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/primesgame.app/primesgame";
+			};
+			name = Debug;
+		};
+		3A0DEDD01CAB2F0100FE1F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = primesgameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bpatient.primesgameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/primesgame.app/primesgame";
+			};
+			name = Release;
+		};
+		3A0DEDD21CAB2F0100FE1F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = primesgameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bpatient.primesgameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = primesgame;
+			};
+			name = Debug;
+		};
+		3A0DEDD31CAB2F0100FE1F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = primesgameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bpatient.primesgameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = primesgame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A0DED9E1CAB2F0100FE1F3F /* Build configuration list for PBXProject "primesgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0DEDC91CAB2F0100FE1F3F /* Debug */,
+				3A0DEDCA1CAB2F0100FE1F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A0DEDCB1CAB2F0100FE1F3F /* Build configuration list for PBXNativeTarget "primesgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0DEDCC1CAB2F0100FE1F3F /* Debug */,
+				3A0DEDCD1CAB2F0100FE1F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A0DEDCE1CAB2F0100FE1F3F /* Build configuration list for PBXNativeTarget "primesgameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0DEDCF1CAB2F0100FE1F3F /* Debug */,
+				3A0DEDD01CAB2F0100FE1F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A0DEDD11CAB2F0100FE1F3F /* Build configuration list for PBXNativeTarget "primesgameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A0DEDD21CAB2F0100FE1F3F /* Debug */,
+				3A0DEDD31CAB2F0100FE1F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A0DED9B1CAB2F0100FE1F3F /* Project object */;
+}
