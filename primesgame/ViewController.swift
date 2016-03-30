@@ -58,87 +58,22 @@ class ViewController: UIViewController {
     
     @IBAction func easyMode(sender: AnyObject) {
         makeList(100)
-        easy.hidden = true
-        medium.hidden = true
-        hard.hidden = true
-        extreme.hidden = true
-        yes.hidden = false
-        no .hidden = false
-        score.text = "Score: " + String(scoreCount)
-        score.hidden = false
-        lives.text = "Lives: " + String(lifeCount)
-        lives.hidden = false
-        heading.hidden = true
-        intro.hidden = true
-        time.hidden = false
-        num.hidden = false
-        let size = nums.count
-        let number = Int(arc4random_uniform(UInt32(size)))
-        num.text = String(number)
-        
+        initializeGame()
     }
     
     @IBAction func mediumMode(sender: AnyObject) {
         makeList(200)
-        easy.hidden = true
-        medium.hidden = true
-        hard.hidden = true
-        extreme.hidden = true
-        yes.hidden = false
-        no .hidden = false
-        score.text = "Score: " + String(scoreCount)
-        score.hidden = false
-        lives.text = "Lives: " + String(lifeCount)
-        lives.hidden = false
-        heading.hidden = true
-        intro.hidden = true
-        time.hidden = false
-        num.hidden = false
-        let size = nums.count
-        let number = Int(arc4random_uniform(UInt32(size)))
-        num.text = String(number)
+        initializeGame()
     }
     
     @IBAction func hardMode(sender: AnyObject) {
         makeList(500)
-        easy.hidden = true
-        medium.hidden = true
-        hard.hidden = true
-        extreme.hidden = true
-        yes.hidden = false
-        no .hidden = false
-        score.text = "Score: " + String(scoreCount)
-        score.hidden = false
-        lives.text = "Lives: " + String(lifeCount)
-        lives.hidden = false
-        heading.hidden = true
-        intro.hidden = true
-        time.hidden = false
-        num.hidden = false
-        let size = nums.count
-        let number = Int(arc4random_uniform(UInt32(size)))
-        num.text = String(number)
+        initializeGame()
     }
     
     @IBAction func extremeMode(sender: AnyObject) {
         makeList(5000)
-        easy.hidden = true
-        medium.hidden = true
-        hard.hidden = true
-        extreme.hidden = true
-        yes.hidden = false
-        no .hidden = false
-        score.text = "Score: " + String(scoreCount)
-        score.hidden = false
-        lives.text = "Lives: " + String(lifeCount)
-        lives.hidden = false
-        heading.hidden = true
-        intro.hidden = true
-        time.hidden = false
-        num.hidden = false
-        let size = nums.count
-        let number = Int(arc4random_uniform(UInt32(size)))
-        num.text = String(number)
+        initializeGame()
     }
     
     @IBAction func yesPressed(sender: AnyObject) {
@@ -149,32 +84,21 @@ class ViewController: UIViewController {
         {
             if lifeCount > 1
             {
-                lifeCount += -1
-                lives.text = "Lives: " + String(lifeCount)
+                decreaseLife()
                 num.text = String(nextNumber)
+
             }
             else
             {
-                //end game
-                score.hidden = true
-                lives.hidden = true
-                heading.hidden = false
-                heading.text = "Game Over!"
-                intro.hidden = false
-                intro.text = "Final score: " + String(scoreCount)
-                time.hidden = true
-                num.hidden = true
-                yes.hidden = true
-                no.hidden = true
-                playAgain.hidden = false
+                endGame()
             }
         }
         else
         {
-            scoreCount += 1
-            score.text = "Score: " + String(scoreCount)
+            increaseScore()
             num.text = String(nextNumber)
         }
+        clock = 3.5
     }
     
     @IBAction func noPressed(sender: AnyObject) {
@@ -183,8 +107,7 @@ class ViewController: UIViewController {
         let nextNumber = Int(arc4random_uniform(UInt32(size)))
         if nums[number!] == false
         {
-            scoreCount += 1
-            score.text = "Score: " + String(scoreCount)
+            increaseScore()
             num.text = String(nextNumber)
             
         }
@@ -192,31 +115,23 @@ class ViewController: UIViewController {
         {
             if lifeCount > 1
             {
-                lifeCount += -1
-                lives.text = "Lives: " + String(lifeCount)
+                decreaseLife()
                 num.text = String(nextNumber)
             }
             else
             {
-                //end game
-                score.hidden = true
-                lives.hidden = true
-                heading.hidden = false
-                heading.text = "Game Over!"
-                intro.hidden = false
-                intro.text = "Final score: " + String(scoreCount)
-                time.hidden = true
-                num.hidden = true
-                yes.hidden = true
-                no.hidden = true
-                playAgain.hidden = false
+                endGame()
+                
             }
         }
+        clock = 3.5
     }
     
     @IBAction func playAgain(sender: AnyObject) {
         lifeCount = 3
         scoreCount = 0
+        timer.invalidate()
+        clock = 3.0
         heading.text = "PRIME?"
         intro.text = "Decide whether the presented number is prime or not. Try to get as many right in a row as possible."
         playAgain.hidden = true
@@ -233,6 +148,10 @@ class ViewController: UIViewController {
     var lifeCount = 3
     
     var scoreCount = 0
+    
+    var timer = NSTimer()
+    
+    var clock = 3.0
     
     func makeList(var number: Int)
     {
@@ -252,7 +171,81 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
+    func timerAction()
+    {
+        if clock > 0.1
+        {
+            clock += -0.5
+            time.text = "Time: " + String(clock)
+        }
+        else
+        {
+            if lifeCount > 1
+            {
+                decreaseLife()
+                let size = nums.count
+                let nextNumber = Int(arc4random_uniform(UInt32(size)))
+                num.text = String(nextNumber)
+                clock = 3.5
+            }
+            else
+            {
+                endGame()
+                
+            }
+        }
+    }
+    
+    func decreaseLife()
+    {
+        lifeCount += -1
+        lives.text = "Lives: " + String(lifeCount)
+    }
+    
+    func increaseScore()
+    {
+        scoreCount += 1
+        score.text = "Score: " + String(scoreCount)
+    }
+    
+    func initializeGame()
+    {
+        easy.hidden = true
+        medium.hidden = true
+        hard.hidden = true
+        extreme.hidden = true
+        yes.hidden = false
+        no .hidden = false
+        score.text = "Score: " + String(scoreCount)
+        score.hidden = false
+        lives.text = "Lives: " + String(lifeCount)
+        lives.hidden = false
+        heading.hidden = true
+        intro.hidden = true
+        time.hidden = false
+        time.text = "Time: " + String(clock)
+        num.hidden = false
+        let size = nums.count
+        let number = Int(arc4random_uniform(UInt32(size)))
+        num.text = String(number)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "timerAction", userInfo: nil, repeats: true)
+    }
+    
+    func endGame()
+    {
+        score.hidden = true
+        lives.hidden = true
+        heading.hidden = false
+        heading.text = "Game Over!"
+        intro.hidden = false
+        intro.text = "Final score: " + String(scoreCount)
+        time.hidden = true
+        num.hidden = true
+        yes.hidden = true
+        no.hidden = true
+        playAgain.hidden = false
+    }
     
 }
 
