@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //labels
     @IBOutlet var score: UILabel!
     
     @IBOutlet var lives: UILabel!
@@ -24,8 +25,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var highscoreLabel: UILabel!
 
-    
-    
+    //buttons
     @IBOutlet var easy: UIButton!
     
     @IBOutlet var medium: UIButton!
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var playAgain: UIButton!
     
-    
+    //variables
     var nums = [Bool]()
     
     var lifeCount = 3
@@ -53,6 +53,9 @@ class ViewController: UIViewController {
     
     var clock = 3.0
     
+    var size = 0
+    
+    var difficulty = 0 // easy-0 medium-1 hard-2 extreme-3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,13 +67,6 @@ class ViewController: UIViewController {
             highScore = highscoreDefault.valueForKey("Highscore") as! NSInteger!
             highscoreLabel.text = "Highscore: " + String(highScore)
         }
-        score.hidden = true
-        lives.hidden = true
-        time.hidden = true
-        num.hidden = true
-        yes.hidden = true
-        no.hidden = true
-        playAgain.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,34 +76,40 @@ class ViewController: UIViewController {
     
     @IBAction func easyMode(sender: AnyObject) {
         makeList(100)
+        size = nums.count
+        difficulty = 0
         initializeGame()
     }
     
     @IBAction func mediumMode(sender: AnyObject) {
         makeList(200)
+        size = nums.count
+        difficulty = 1
         initializeGame()
     }
     
     @IBAction func hardMode(sender: AnyObject) {
         makeList(500)
+        size = nums.count
+        difficulty = 2
         initializeGame()
     }
     
     @IBAction func extremeMode(sender: AnyObject) {
-        makeList(5000)
+        makeList(1000)
+        size = nums.count
+        difficulty = 3
         initializeGame()
     }
     
     @IBAction func yesPressed(sender: AnyObject) {
         let number = Int(num.text!)
-        let size = nums.count
-        let nextNumber = Int(arc4random_uniform(UInt32(size)))
         if nums[number!] == false
         {
             if lifeCount > 1
             {
                 decreaseLife()
-                num.text = String(nextNumber)
+                num.text = String(getNextnum())
 
             }
             else
@@ -118,7 +120,7 @@ class ViewController: UIViewController {
         else
         {
             increaseScore()
-            num.text = String(nextNumber)
+            num.text = String(getNextnum())
         }
         clock = 3.5
         checkHighscore()
@@ -126,12 +128,10 @@ class ViewController: UIViewController {
     
     @IBAction func noPressed(sender: AnyObject) {
         let number = Int(num.text!)
-        let size = nums.count
-        let nextNumber = Int(arc4random_uniform(UInt32(size)))
         if nums[number!] == false
         {
             increaseScore()
-            num.text = String(nextNumber)
+            num.text = String(getNextnum())
             
         }
         else
@@ -139,7 +139,7 @@ class ViewController: UIViewController {
             if lifeCount > 1
             {
                 decreaseLife()
-                num.text = String(nextNumber)
+                num.text = String(getNextnum())
             }
             else
             {
@@ -171,7 +171,6 @@ class ViewController: UIViewController {
         nums = [Bool](count: number + 1, repeatedValue: true)
         nums[0] = false
         nums[1] = false
-        let size = nums.count
         
         for i in 2 ..< size
         {
@@ -183,6 +182,31 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func getNextnum() -> Int
+    {
+        var nextNumber = Int(arc4random_uniform(UInt32(size)))
+        if difficulty == 0
+        {
+            return nextNumber
+        }
+        if difficulty == 1 || difficulty == 2
+        {
+            while nextNumber % 2 == 0
+            {
+                nextNumber = Int(arc4random_uniform(UInt32(size)))
+ 
+            }
+        }
+        if difficulty == 3
+        {
+            while nextNumber % 2 == 0 || nextNumber % 5 == 0
+            {
+                nextNumber = Int(arc4random_uniform(UInt32(size)))
+            }
+        }
+        return nextNumber
     }
     
     func timerAction()
@@ -204,6 +228,7 @@ class ViewController: UIViewController {
             }
             else
             {
+                checkHighscore()
                 endGame()
                 
             }
@@ -253,7 +278,7 @@ class ViewController: UIViewController {
         time.text = "Time: " + String(clock)
         num.hidden = false
         let size = nums.count
-        let number = Int(arc4random_uniform(UInt32(size)))
+        let number = getNextnum()
         num.text = String(number)
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "timerAction", userInfo: nil, repeats: true)
     }
