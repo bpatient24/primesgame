@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var num: UILabel!
     
+    @IBOutlet var highscoreLabel: UILabel!
+
+    
     
     @IBOutlet var easy: UIButton!
     
@@ -37,10 +40,30 @@ class ViewController: UIViewController {
     
     @IBOutlet var playAgain: UIButton!
     
+    
+    var nums = [Bool]()
+    
+    var lifeCount = 3
+    
+    var scoreCount = 0
+    
+    var timer = NSTimer()
+    
+    var highScore = 0
+    
+    var clock = 3.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        var highscoreDefault = NSUserDefaults.standardUserDefaults()
+        if highscoreDefault.valueForKey("Highscore") != nil
+        {
+            highScore = highscoreDefault.valueForKey("Highscore") as! NSInteger!
+            highscoreLabel.text = "Highscore: " + String(highScore)
+        }
         score.hidden = true
         lives.hidden = true
         time.hidden = true
@@ -54,7 +77,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func easyMode(sender: AnyObject) {
         makeList(100)
@@ -99,6 +121,7 @@ class ViewController: UIViewController {
             num.text = String(nextNumber)
         }
         clock = 3.5
+        checkHighscore()
     }
     
     @IBAction func noPressed(sender: AnyObject) {
@@ -125,6 +148,7 @@ class ViewController: UIViewController {
             }
         }
         clock = 3.5
+        checkHighscore()
     }
     
     @IBAction func playAgain(sender: AnyObject) {
@@ -141,17 +165,6 @@ class ViewController: UIViewController {
         extreme.hidden = false
         
     }
-    
-
-    var nums = [Bool]()
-    
-    var lifeCount = 3
-    
-    var scoreCount = 0
-    
-    var timer = NSTimer()
-    
-    var clock = 3.0
     
     func makeList(var number: Int)
     {
@@ -197,6 +210,19 @@ class ViewController: UIViewController {
         }
     }
     
+    func checkHighscore()
+    {
+        if scoreCount > highScore
+        {
+            highScore = scoreCount
+            highscoreLabel.text = "Highscore: " + String(highScore)
+            
+            var highscoreDefault = NSUserDefaults.standardUserDefaults()
+            highscoreDefault.setValue(highScore, forKey: "Highscore")
+            highscoreDefault.synchronize()
+        }
+    }
+    
     func decreaseLife()
     {
         lifeCount += -1
@@ -239,7 +265,10 @@ class ViewController: UIViewController {
         heading.hidden = false
         heading.text = "Game Over!"
         intro.hidden = false
-        intro.text = "Final score: " + String(scoreCount)
+        intro.text = "You ran out of lives!" + "\n" +
+                     "Final score: " + String(scoreCount) + "\n" +
+                     "Highscore: " + String(highScore)
+        
         time.hidden = true
         num.hidden = true
         yes.hidden = true
