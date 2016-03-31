@@ -76,28 +76,24 @@ class ViewController: UIViewController {
     
     @IBAction func easyMode(sender: AnyObject) {
         makeList(100)
-        size = nums.count
         difficulty = 0
         initializeGame()
     }
     
     @IBAction func mediumMode(sender: AnyObject) {
         makeList(200)
-        size = nums.count
         difficulty = 1
         initializeGame()
     }
     
     @IBAction func hardMode(sender: AnyObject) {
         makeList(500)
-        size = nums.count
         difficulty = 2
         initializeGame()
     }
     
     @IBAction func extremeMode(sender: AnyObject) {
         makeList(1000)
-        size = nums.count
         difficulty = 3
         initializeGame()
     }
@@ -171,7 +167,7 @@ class ViewController: UIViewController {
         nums = [Bool](count: number + 1, repeatedValue: true)
         nums[0] = false
         nums[1] = false
-        
+        size = nums.count
         for i in 2 ..< size
         {
             if nums[i]
@@ -193,7 +189,7 @@ class ViewController: UIViewController {
         }
         if difficulty == 1 || difficulty == 2
         {
-            while nextNumber % 2 == 0
+            while nextNumber % 2 == 0                           //eliminates even numbers 
             {
                 nextNumber = Int(arc4random_uniform(UInt32(size)))
  
@@ -201,7 +197,7 @@ class ViewController: UIViewController {
         }
         if difficulty == 3
         {
-            while nextNumber % 2 == 0 || nextNumber % 5 == 0
+            while nextNumber % 2 == 0 || nextNumber % 5 == 0    //eliminates even numbers and multiples of 5
             {
                 nextNumber = Int(arc4random_uniform(UInt32(size)))
             }
@@ -277,7 +273,6 @@ class ViewController: UIViewController {
         time.hidden = false
         time.text = "Time: " + String(clock)
         num.hidden = false
-        let size = nums.count
         let number = getNextnum()
         num.text = String(number)
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "timerAction", userInfo: nil, repeats: true)
